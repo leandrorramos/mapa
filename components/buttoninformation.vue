@@ -1,22 +1,18 @@
 <template>
     <div>
-        <v-tooltip location="bottom">
-            <span class="text-caption">Mais Informações do rio</span>
-            <template v-slot:activator="{ props }">
-                <v-btn
-                    v-bind="props"
-                    size="x-small"
-                    color="red"
-                    icon="mdi-circle"
-                    @click="openDialog()"
-                >{{ tipo }}</v-btn>
-            </template>
-        </v-tooltip>
+        <v-btn
+            v-bind="props"
+            size="small"
+            color="red"
+            icon="mdi-circle"
+            @click="openDialog()"
+        >{{ tipo }}</v-btn>
+        
         <v-dialog
             v-model="showDialog"
             width="auto"
             >
-            <v-card style="min-width: 900px; max-width: 1200px;">
+            <v-card style="min-width: 900px; max-width: 1100px;">
                 <v-card-title class="bg-blue-darken-2">
                     <div class="d-flex align-center justify-space-between">
                         <h4 class="text-caption text-md-overline font-weight-bold"><v-icon color="blue" icon="mdi-information" small></v-icon> Informações sobre o rio</h4>
@@ -28,16 +24,16 @@
 
                 <v-card-text class="align-center justify-center text-center">
                     <div class="mb-3"> 
-                        <p class="text-h4 text-center mt-5 font-weight-bold" style="min-width: 200px;"> {{ info[tipo].title }}</p>
+                        <p class="text-h4 text-center font-weight-bold" style="min-width: 200px;"> {{ info[tipo].title }}</p>
                     </div>
                     <div class="d-flex align-center justify-center">
                         <div class="align-center justify-center mr-3"> 
                             <img :src="info[tipo].img_antes" width="500px" />
-                            <p class="text-caption text-center">rio poluído</p>
+                            <p class="text-caption text-center">Antes</p>
                         </div>
                         <div class="text-center ml-3">
                             <img :src="info[tipo].img_depois" width="500px" />
-                            <p class="text-caption text-center">rio despoluído</p>
+                            <p class="text-caption text-center">Depois</p>
                         </div>
                     </div>
                     <div class="text-content">
