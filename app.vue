@@ -25,15 +25,15 @@
 </template>
 <style >
   .content{
-    width: 1100px;
+    width: 1080px;
     height: 100%;
     position: absolute;
     overflow: hidden;
     margin-top: 10px;
   }
   .mapa{
-    width: 1100px;
-    height: 618px;
+    width: 1080px;
+    height: 700px;
     position: absolute;
     background-image: url("/assets/mapa.jpg");
     background-position: center;

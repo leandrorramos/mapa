@@ -2,7 +2,6 @@
     <div>
         <v-btn
             v-bind="props"
-            size="small"
             color="red"
             icon="mdi-circle"
             @click="openDialog()"
@@ -12,7 +11,7 @@
             v-model="showDialog"
             width="auto"
             >
-            <v-card style="min-width: 900px; max-width: 1100px;">
+            <v-card style="min-width: 900px; max-width: 1080px;">
                 <v-card-title class="bg-blue-darken-2">
                     <div class="d-flex align-center justify-space-between">
                         <h4 class="text-caption text-md-overline font-weight-bold"><v-icon color="blue" icon="mdi-information" small></v-icon> Informações sobre o rio</h4>
